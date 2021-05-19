@@ -1,0 +1,36 @@
+.diagramm {
+  grid-area: diagramm;
+  @include cell();
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 20px;
+    color: #cacaca;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__parts {
+    padding-top: 22px;
+  }
+
+  &__parts-name {
+    position: relative;
+    margin-bottom: 5px;
+    padding-left: 25px;
+    @include text($TEXT_SIZE, $TEXT_WEIGHT);
+  }
+
+  &__parts-name--pink-square::before {
+    content: "";
+    @include squre($PINK-SQUARE);
+  }
+
+  &__parts-name--purple-square::before {
+    content: "";
+    @include squre($PURPLE_SQURE);
+  }
+}

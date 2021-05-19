@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: card;
+  grid-column: span 1;
+  @include cell();
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__heading-title {
+    @include text($TITLE_SIZE, $TITLE_WEIGHT);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info-variation {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info-percent {
+    padding-right: 9px;
+    font-size: 20px;
+    color: #979797;
+  }
+  &__info-quantity {
+    color: #cacaca;
+  }
+}
+
+.ad {
+  display: none;
+  text-align: center;
+  color: #cacaca;
+  @include cell($PRIMARY_PADDING, $BACKGROUND_CELL, $PRIMARY_RADIUS);
+}

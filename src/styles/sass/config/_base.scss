@@ -1,0 +1,51 @@
+.app {
+  display: flex;
+  position: relative;
+  max-width: 1280px;
+  margin: 5% auto;
+  font-family: "Lora", sans-serif;
+  background: #212427;
+  border-radius: $PRIMARY_RADIUS;
+}
+.app::before {
+  content: "";
+  position: absolute;
+  right: 400px;
+  bottom: 350px;
+  z-index: calc(-1);
+  width: 1498px;
+  height: 806px;
+  background: url(../../img/backgrounds/big-figure.png) no-repeat center/cover;
+}
+
+.app::after {
+  content: "";
+  position: absolute;
+  left: 1192px;
+  top: 760px;
+  z-index: 3;
+  width: 224px;
+  height: 224px;
+  background: url(../../img/backgrounds/small-figure.png) no-repeat center/cover;
+}
+.app__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main {
+  position: relative;
+  display: grid;
+  grid-template-rows: 148px repeat(2, 242px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+  grid-template-areas:
+    "card card card"
+    "graphic graphic diagramm"
+    "gistogramm gistogramm geo";
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+}

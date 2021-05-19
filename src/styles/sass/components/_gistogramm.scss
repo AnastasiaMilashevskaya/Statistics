@@ -1,0 +1,42 @@
+.gistogramm {
+  grid-area: gistogramm;
+  overflow-x: scroll;
+  @include cell();
+
+  &__heading {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__heading-title {
+    @include text($TITLE_SIZE, $TITLE_WEIGHT);
+  }
+
+  &__gender {
+    display: flex;
+  }
+
+  &__gender-text {
+    position: relative;
+    padding-right: 10px;
+    padding-left: 25px;
+    @include text($TEXT_SIZE, $TEXT_WEIGHT);
+  }
+
+  &__gender-text--pink-square::before {
+    content: "";
+    @include squre($PINK-SQUARE);
+  }
+
+  &__gender-text--purple-square::before {
+    content: "";
+    @include squre($PURPLE_SQURE);
+  }
+
+  &__img {
+    width: 657px;
+    height: 135px;
+  }
+}

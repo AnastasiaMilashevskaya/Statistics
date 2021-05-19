@@ -1,0 +1,45 @@
+.graphic {
+  grid-area: graphic;
+  overflow-x: scroll;
+  @include cell();
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__heading-title {
+    @include text($TITLE_SIZE, $TITLE_WEIGHT);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-date {
+    position: relative;
+    padding-right: 70px;
+    @include text($TEXT_SIZE, $TEXT_WEIGHT);
+  }
+
+  &__info-date::after {
+    @include switch(6px, 170px);
+  }
+
+  &__info-checkbox {
+    margin-right: 6px;
+  }
+
+  &__info-label {
+    padding-right: 10px;
+    @include text($TEXT_SIZE, $TEXT_WEIGHT);
+  }
+
+  &__content-img {
+    width: 678px;
+    height: 135px;
+  }
+}

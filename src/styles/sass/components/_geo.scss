@@ -1,0 +1,36 @@
+.geo {
+  grid-area: geo;
+  @include cell();
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__heading-title {
+    margin-bottom: 24px;
+    @include text($TITLE_SIZE, $TITLE_WEIGHT);
+  }
+
+  &__choiсe {
+    display: flex;
+  }
+
+  &__choiсe-text {
+    box-sizing: border-box;
+    padding-left: 10px;
+    color: #979797;
+    cursor: pointer;
+    @include text($TEXT_SIZE, $TEXT_WEIGHT);
+  }
+
+  &__choiсe-text:hover {
+    font-weight: 600;
+    color: #4f4f4f;
+  }
+
+  &__img {
+    width: 240px;
+    height: 120px;
+  }
+}
